@@ -1,0 +1,57 @@
+
+.prediction-container{
+    position: center;
+    padding-left: 40%;
+}
+
+.prediction-label {
+    width: 100px;
+    height: 50px;
+    background-color: lightgrey;
+    border-color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+
+.prediction-value {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border-color: black;
+    border: 1px solid #ccc;
+}
+
+.index {
+    width: 400px;
+    height:400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.predictionResult{
+    width: 100px;
+    height: 50px;
+    background-color: lightgrey;
+    border-color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+
+#sendDataButton {
+    margin-left: 15%;
+}
+
+#predictionResult {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border-color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid black;
+    margin-left: 15%;
+}
+
+

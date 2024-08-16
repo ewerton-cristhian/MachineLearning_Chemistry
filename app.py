@@ -1,0 +1,59 @@
+from flask import Flask, render_template, request, jsonify, send_from_directory
+from lib.descriptor_gen import DescriptorGen
+import joblib
+import numpy as np
+
+app = Flask(__name__, template_folder='templates')
+
+def predict_CYP3A4(molecule_smiles):
+    desc_gen = DescriptorGen()
+    desc = desc_gen.from_smiles(molecule_smiles)
+    desc = np.stack(desc).reshape(1, -1)
+
+    path_model = 'models/model_standard.pkl'
+    #path_model = 'models/model_resampled.pkl'
+
+    model = joblib.load(path_model)
+    pred = model.predict(desc)
+
+    return pred
+
+
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('home.html')
+
+@app.route('/ketcher', methods=['GET'])
+def ketcher_iframe():
+   return render_template('ketcher/index.html')
+
+@app.route('/submit', methods=['POST']) #
+def submit():
+    # Obter os dados da solicitação
+    dados = request.get_json()
+    molecule_smiles = dados.get('variavel')
+
+    pred = predict_CYP3A4(molecule_smiles)
+
+    # Exibir o dado recebido no console do servidor
+    print(f"Variável recebida: {molecule_smiles}")
+    print(f"Classe de atividade em CYP3A4: {pred[0]}")
+
+
+    # Retornar uma resposta JSON
+    return jsonify({'response': f'{pred[0]}'})
+
+
+if __name__ == "__main__":
+    app.run(port=3000, debug=True)
+
+
+
+''' 
+@app.route('/js/getMolecule.js', methods=['GET'])
+def get_molecule_js():
+    return send_from_directory('static/js', 'getMolecule.js')
+
+
+
+'''

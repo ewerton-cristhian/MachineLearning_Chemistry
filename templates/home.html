@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ketcher APP</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link href="{{ url_for('static', filename='./css/styles.css') }}" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- Ketcher iframe-->
+        <iframe defer="defer" id="ifKetcher" src="{{ url_for('ketcher_iframe') }}" width="800" height="600">
+        </iframe>
+        
+        <br>
+        <br>
+        
+        <button id="sendDataButton">Enviar Dados</button>
+        
+        <br>
+        <br>
+
+        <div >
+            <p style="margin-left: 15%;">Classe</p>
+        </div>
+        
+        <div id="predictionResult"></div>
+
+        <script src="{{ url_for('static', filename='js/getMolecule.js') }}"></script>
+
+    </body>
+
+</html>
+
+
+
