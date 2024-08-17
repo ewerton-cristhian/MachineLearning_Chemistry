@@ -10,23 +10,44 @@
 
     <body>
         
-        <!-- Ketcher iframe-->
-        <iframe defer="defer" id="ifKetcher" src="{{ url_for('ketcher_iframe') }}" width="800" height="600">
-        </iframe>
         
-        <br>
-        <br>
-        
-        <button id="sendDataButton">Enviar Dados</button>
-        
-        <br>
-        <br>
+        <div class="container">
 
-        <div >
-            <p style="margin-left: 15%;">Classe</p>
+            <div class="row">
+                <div class="col-12 containerTitle">
+                    <h1> Molecular activity prediction in CYP3A4</h1>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <!-- Ketcher iframe-->
+                <iframe defer="defer" id="ifKetcher" src="{{ url_for('ketcher_iframe') }}" width="800" height="600">
+                </iframe>
+            </div>
+
+            <div class="row">
+                <div class="col-6 containerButton">
+                    <button id="sendDataButton">Send</button>
+                </div>
+
+                <div class="col-6 containerResults">
+                    <div id="tagResult">Prediction</div>
+                    <div id="predictionResult"></div>
+
+                </div>
+                
+
+            </div>
+
+            
+            
+            <!-- <p>Classe</p> -->
+            
         </div>
+
+       
         
-        <div id="predictionResult"></div>
 
         <script src="{{ url_for('static', filename='js/getMolecule.js') }}"></script>
 
