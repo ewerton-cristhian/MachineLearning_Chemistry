@@ -9,7 +9,7 @@ This repository aims to provide the necessary scripts to run the application to 
 
 * [Installation](#installation)
 * [How to use](#how-to-use)
-* [Project structure](#requirements)
+* [Project structure](#project-structure)
 
 
 ### Installation
