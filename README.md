@@ -66,14 +66,14 @@ To use the aplication to predict CYP34A activity, the user must perform the foll
 <b>2.</b> After draw or upload the molecule, the user must press the <b>Send</b> button to submit the molecule to the server. The result of the prediction will be displayed om the white box located on the right.
 
 <div align="center">
-<img src="figures/screen_4.png" width="300" />
+<img src="figures/screen_2.png" width="300" />
 <p><b>Figure 2</b>: Screen of the upload of Smiles code/file.</p>
 </div>
 
 <br>
 
 <div align="center">
-<img src="figures/screen_5.png" width="300" />
+<img src="figures/screen_3.png" width="300" />
 <p><b>Figure 3</b>: Screen of the text box to paste the Smiles code.</p>
 </div>
 
