@@ -31,7 +31,7 @@ document.getElementById('sendDataButton').addEventListener('click', async () => 
     fetch('/submit', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ variavel: smiles })
+        body: JSON.stringify({ variavel: smiles  })
     })
     .then(response => response.json())
     .then(data => {document.getElementById('predictionResult').innerText = data.response;})

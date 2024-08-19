@@ -10,20 +10,33 @@
 
     <body>
         
-        
-        <div class="container">
+        <div class="container planStyle">
 
             <div class="row">
                 <div class="col-12 containerTitle">
-                    <h1> Molecular activity prediction in CYP3A4</h1>
+                    <h1> Molecular activity prediction in CYP3A4 enzyme</h1>
                 </div>
                 
             </div>
 
+            <br>
             <div class="row">
                 <!-- Ketcher iframe-->
                 <iframe defer="defer" id="ifKetcher" src="{{ url_for('ketcher_iframe') }}" width="800" height="600">
                 </iframe>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col-6 containerButton">
+                    <p>Press the <b>Send</b> to submit your molecule</p>
+                </div>
+
+                <div class="col-6 containerResults">
+                    <p>Result for molecular activity in CYP3A4 (Class and Probability)</p>
+                </div>
+
             </div>
 
             <div class="row">
@@ -36,21 +49,24 @@
                     <div id="predictionResult"></div>
 
                 </div>
+            
                 
 
             </div>
 
-            
-            
-            <!-- <p>Classe</p> -->
-            
+            <br>
+            <div class="row">
+                
+                <h5>For more information, feel free to access our
+                    <a href="https://github.com/ewerton-cristhian/MachineLearning_Chemistry"> GitHub repository
+                    </a>.
+                </h5>
+            </div>
+
         </div>
 
-       
-        
-
         <script src="{{ url_for('static', filename='js/getMolecule.js') }}"></script>
-
+ 
     </body>
 
 </html>

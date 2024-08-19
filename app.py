@@ -50,14 +50,13 @@ def submit():
     # Obter os dados da solicitação
     dados = request.get_json()
     molecule_smiles = dados.get('variavel')
-
+    
     result = predict_CYP3A4(molecule_smiles)
 
     # Exibir o dado recebido no console do servidor
     print(f"Variável recebida: {molecule_smiles}")
     print(f"Classe de atividade em CYP3A4: {result}")
-
-
+    
     # Retornar uma resposta JSON
     return jsonify({'response': f'{result}'})
 
